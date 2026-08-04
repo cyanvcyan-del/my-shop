@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Container from "./layout/Container";
 import Link from "next/link";
 import { useState } from "react";
@@ -7,10 +7,9 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    
     <nav
-      className="relative bg-mainS w-[92%] md:max-w-[68.25rem]
-                 max-w-[68.25rem] h-14 md:h-14 mx-auto
+      className="relative bg-mainS w-[95%] md:w-[95%]
+            h-14 md:h-14 mx-auto
                  rounded-full mt-4 shadow-[3px_4px_6.7px_rgba(0,0,0,0.02)]
                  flex items-center justify-between px-3 md:px-0  z-50"
     >
@@ -20,7 +19,7 @@ export default function Navbar() {
           href="/"
           className="bg-mainT w-20 md:w-[6.4375rem] h-9 md:h-[2.625rem]
                      rounded-full flex items-center justify-center
-                     ml-0 md:ml-2.5 font-extrabold text-sm lg:text-base
+                     ml-0 md:ml-2.5 font-extrabold text-base md:text-lg
                      transition-all duration-300 hover:scale-105"
         >
           Verdea
@@ -122,9 +121,8 @@ export default function Navbar() {
         </button>
       </div>
 
-      
-<div
-  className={`
+      <div
+        className={`
     absolute top-full left-0 right-0 mt-2 mx-4
     bg-white rounded-2xl shadow-lg
     md:hidden overflow-hidden
@@ -135,47 +133,47 @@ export default function Navbar() {
         : "opacity-0 scale-y-75 -translate-y-2 pointer-events-none"
     }
   `}
->
-  <div className="p-4 flex flex-col gap-3">
-    <ul className="flex flex-col gap-3 text-sm font-semibold">
-      <li>
-        <Link
-          href="/grouping"
-          className="inline-block transition-all duration-300 hover:scale-110"
-        >
-          Grouping
-        </Link>
-      </li>
+      >
+        <div className="p-4 flex flex-col gap-3">
+          <ul className="flex flex-col gap-3 text-sm font-semibold">
+            <li>
+              <Link
+                href="/grouping"
+                className="inline-block transition-all duration-300 hover:scale-110"
+              >
+                Grouping
+              </Link>
+            </li>
 
-      <li>
-        <Link
-          href="/bestsellers"
-          className="inline-block transition-all duration-300 hover:scale-110"
-        >
-          Bestsellers
-        </Link>
-      </li>
+            <li>
+              <Link
+                href="/bestsellers"
+                className="inline-block transition-all duration-300 hover:scale-110"
+              >
+                Bestsellers
+              </Link>
+            </li>
 
-      <li>
-        <Link
-          href="/about"
-          className="inline-block transition-all duration-300 hover:scale-110 hover:text-mainP-500"
-        >
-          About us
-        </Link>
-      </li>
-    </ul>
+            <li>
+              <Link
+                href="/about"
+                className="inline-block transition-all duration-300 hover:scale-110 hover:text-mainP-500"
+              >
+                About us
+              </Link>
+            </li>
+          </ul>
 
-    <Link
-      href="/account"
-      className="bg-mainblack h-10 rounded-full text-white
+          <Link
+            href="/account"
+            className="bg-mainblack h-10 rounded-full text-white
                  font-medium text-sm w-full flex items-center justify-center
                  transition-all duration-300 hover:scale-105"
-    >
-      Log in | Sign up
-    </Link>
-  </div>
-</div>
+          >
+            Log in | Sign up
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 }

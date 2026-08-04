@@ -130,8 +130,9 @@
   }
   html {
     @apply font-sans;
-  } 
+  }
 }
 ul, button, input{
   cursor:pointer;
 }
+
