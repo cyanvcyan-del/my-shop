@@ -19,20 +19,20 @@ export default function Navbar() {
           href="/"
           className="bg-mainT w-20 md:w-[6.4375rem] h-9 md:h-[2.625rem]
                      rounded-full flex items-center justify-center
-                     ml-0 md:ml-2.5 font-extrabold text-base md:text-lg
-                     transition-all duration-300 hover:scale-105"
+                     ml-0 md:ml-2.5 font-black text-base md:text-xl
+                     transition-all duration-300 hover:scale-105 active:scale-105"
         >
           Verdea
         </Link>
 
         <ul
           className="hidden md:flex items-center gap-6 md:gap-10 lg:gap-16
-                     text-xs lg:text-base font-semibold"
+                     text-base lg:text-base font-bold"
         >
           <li>
             <Link
               href="#grouping"
-              className="inline-block transition-all duration-300 ease-in-out hover:scale-110"
+              className="inline-block transition-all duration-300 ease-in-out hover:scale-110 active:scale-110"
             >
               Grouping
             </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/bestsellers"
-              className="inline-block transition-all duration-300 ease-in-out hover:scale-110"
+              className="inline-block transition-all duration-300 ease-in-out hover:scale-110 active:scale-110"
             >
               Bestsellers
             </Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/about"
-              className="inline-block transition-all duration-300 ease-in-out hover:scale-110"
+              className="inline-block transition-all duration-300 ease-in-out hover:scale-110 active:scale-110"
             >
               About us
             </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
           href="/cart"
           className="bg-mainP-500 w-9 h-9 md:w-[2.625rem] md:h-[2.625rem]
                      rounded-full flex items-center justify-center
-                     transition-all duration-300 hover:scale-110"
+                     transition-all duration-300 hover:scale-110 active:scale-110"
           aria-label="Shopping cart"
         >
           <svg
@@ -91,7 +91,7 @@ export default function Navbar() {
                      px-4 md:px-6 rounded-full mr-0 md:mr-2.5
                      text-white font-medium text-xs lg:text-sm
                      items-center justify-center
-                     transition-all duration-300 hover:scale-105"
+                     transition-all duration-300 hover:scale-105 active:scale-105"
         >
           Log in | Sign up
         </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden bg-mainblack w-9 h-9 rounded-full
                      flex items-center justify-center text-white
-                     transition-transform duration-300  hover:scale-110"
+                     transition-transform duration-300 hover:scale-110 active:scale-110"
           aria-label="Open navigation menu"
         >
           <svg
@@ -139,7 +139,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/grouping"
-                className="inline-block transition-all duration-300 hover:scale-110"
+                className="inline-block transition-all duration-300 hover:scale-110 active:scale-110"
               >
                 Grouping
               </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/bestsellers"
-                className="inline-block transition-all duration-300 hover:scale-110"
+                className="inline-block transition-all duration-300 hover:scale-110 active:scale-110"
               >
                 Bestsellers
               </Link>
@@ -157,7 +157,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/about"
-                className="inline-block transition-all duration-300 hover:scale-110 hover:text-mainP-500"
+                className="inline-block transition-all duration-300 hover:scale-110 hover:text-mainP-500 active:scale-110 active:text-mainP-500"
               >
                 About us
               </Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
             href="/account"
             className="bg-mainblack h-10 rounded-full text-white
                  font-medium text-sm w-full flex items-center justify-center
-                 transition-all duration-300 hover:scale-105"
+                 transition-all duration-300 hover:scale-105 active:scale-105"
           >
             Log in | Sign up
           </Link>

@@ -2,7 +2,7 @@ export default function MainDish({ className = "w-1/2 h-1/2" }: { className?: st
   return (
     <div className="w-full h-full flex items-center justify-center">
       <svg
-        className={className}
+        className={`${className} transition-colors duration-200 hover:text-white`}
         version="1.1"
         id="_x32_"
         xmlns="http://www.w3.org/2000/svg"
