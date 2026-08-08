@@ -9,21 +9,17 @@ export default function Grouping() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchMenu()
-      .then((data) => {
+  fetchMenu()
+    .then((data) => {
+      setTimeout(() => {
         setItems(data);
         setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
+      },);
+    })
+    .catch(() => setLoading(false));
+}, []);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-40">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-b-mainP-500"></div>
-      </div>
-    );
-  }
+
 
   return (
     <div>
