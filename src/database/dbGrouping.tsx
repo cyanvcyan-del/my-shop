@@ -18,6 +18,7 @@ export const menuItems: MenuItem[] = [
     id: 1,
     title: "Main Dish",
     icon: <MainDish />
+    
   },
   {
     id: 2,

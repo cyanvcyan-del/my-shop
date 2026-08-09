@@ -31,7 +31,7 @@ export default function Navbar() {
         >
           <li>
             <Link
-              href="#grouping"
+              href="/#grouping"
               className="inline-block transition-all duration-300 ease-in-out hover:scale-110 active:scale-110"
             >
               Grouping
@@ -40,7 +40,7 @@ export default function Navbar() {
 
           <li>
             <Link
-              href="/bestsellers"
+              href="/best-sellers"
               className="inline-block transition-all duration-300 ease-in-out hover:scale-110 active:scale-110"
             >
               Bestsellers
@@ -49,7 +49,7 @@ export default function Navbar() {
 
           <li>
             <Link
-              href="/about"
+              href="/about-us"
               className="inline-block transition-all duration-300 ease-in-out hover:scale-110 active:scale-110"
             >
               About us
@@ -86,7 +86,7 @@ export default function Navbar() {
 
         {/* Account */}
         <Link
-          href="/account"
+          href="/sign-in"
           className="hidden md:flex bg-mainblack h-9 md:h-[2.625rem]
                      px-4 md:px-6 rounded-full mr-0 md:mr-2.5
                      text-white font-medium text-xs lg:text-sm

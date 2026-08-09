@@ -1,8 +1,10 @@
 import ProductCart from "./layout/ProductCard"
 import data from "@/src/database/db.json";
 
+
 export default function BestSellers() {
     return(
+      
         <div>
     <h1 className="font-black text-lg md:text-2xl xl:text-[2.5rem] w-[95%] md:w-[95%] mx-auto mt-23">
         Best Sellers
