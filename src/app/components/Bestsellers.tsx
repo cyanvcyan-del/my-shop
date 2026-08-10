@@ -19,13 +19,15 @@ export default function BestSellers() {
           WebkitOverflowScrolling: "touch",
         }}>
          {data.products.map((product) => (
-          <ProductCart
-            key={product.id}
-            image={product.image}
-            title={product.title}
-            price={product.price}
-          />
-        ))}
+  <ProductCart
+    key={product.id}
+    id={product.id}
+    image={product.image}
+    title={product.title}
+    price={product.price}
+  />
+))}
+        
     </div>
               <style>{`
         #grouping::-webkit-scrollbar {

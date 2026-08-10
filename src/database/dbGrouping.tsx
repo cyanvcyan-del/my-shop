@@ -11,43 +11,50 @@ export interface MenuItem {
   id: number;
   title: string;
   icon: ReactNode;
+  link: string;
 }
 
 export const menuItems: MenuItem[] = [
   {
     id: 1,
     title: "Main Dish",
-    icon: <MainDish />
+    icon: <MainDish />,
+    link: "/main-dishes"
     
   },
   {
     id: 2,
     title: "Fast Food",
-    icon:<Fastfood />
+    icon:<Fastfood />,
+    link: "/"
 
   },
   {
     id: 3,
     title: "Beverages",
-    icon:<CraftedBeverages />
+    icon:<CraftedBeverages />,
+    link: "/"
 
   },
   {
     id: 4,
     title: "Sweet Treats",
-    icon:<SweetTreats />
+    icon:<SweetTreats />,
+    link: "/"
 
   },
   {
     id: 5,
     title: "Sushi & Rolls",
-    icon:<SushiRolls />
+    icon:<SushiRolls />,
+    link: "/"
 
   },
   {
     id: 6,
     title: "Soft Drinks",
-    icon:<SoftDrinks/>
+    icon:<SoftDrinks/>,
+    link: "/"
 
   }
 

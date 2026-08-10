@@ -5,79 +5,113 @@
       "image": "food/japanese-beef-donburi-bowl-with-rice-scallions.webp",
       "title": "Beef Donburi Bowl",
       "description": "Tender sliced beef served over steamed Japanese rice, topped with fresh scallions and finished with a savory soy-based glaze. A comforting and flavorful rice bowl inspired by traditional Japanese cuisine.",
-      "price": "$29.99"
+      "price": "29.99",
+      "spice": "Not Spicy",
+      "time": "20-40 min",
+      "available": true
     },
     {
       "id": "2",
       "image": "food/beef-noodle-soup-with-bok-choy-chili.webp",
       "title": "beef noodle soup bokchoy",
       "description": "Rich and flavorful beef broth served with tender beef slices, chewy noodles, and fresh bok choy. Finished with aromatic herbs, chili, and savory seasonings for a comforting bowl with a gentle spicy kick.",
-      "price": "$39.99"
+      "price": "39.99",
+      "spice": "Very Spicy",
+      "time": "20-25 min",
+      "available": false
     },
     {
       "id": "3",
       "image": "food/ramen-noodle-soup-with-sliced-beef-boiled-eggs.webp",
       "title": "Classic Beef Ramen",
       "description": "Rich and savory beef broth served with springy ramen noodles, tender sliced beef, a soft-boiled egg, and fresh scallions. Finished with aromatic seasonings for a warm, comforting bowl full of authentic flavor.",
-      "price": "$32.99"
+      "price": "32.99",
+      "spice": "Very Spicy",
+      "time": "15-20 min",
+      "available": true
     },
     {
       "id": "4",
       "image": "food/perfectly-grilled-steak-with-fresh-rosemary.webp",
       "title": "Rosemary Grilled Steak",
       "description": "Juicy grilled beef steak seasoned with fresh rosemary, garlic, and cracked black pepper. Cooked to perfection and served with a rich, savory finish that highlights the steak's natural flavor.",
-      "price": "$56.99"
-    },    {
+      "price": "56.99",
+      "spice": "Medium",
+      "time": "10-15 min",
+      "available": true
+    },
+    {
       "id": "5",
       "image": "food/spicy-grilled-chicken-with-red-onion-green-chili.webp",
       "title": "Spicy Grilled Chicken",
       "description": "Tender grilled chicken marinated with bold spices and flame-cooked to perfection. Served with fresh red onion, green chili, and aromatic herbs for a smoky, juicy dish with a satisfying kick.",
-      "price": "$27.99"
+      "price": "27.99",
+      "spice": "Medium",
+      "time": "30-40 min",
+      "available": false
     },
-
     {
       "id": "6",
       "image": "food/crispy-fried-chicken-tenders-with-red-cabbage-slaw.webp",
       "title": "Crispy Fried Chicken",
       "description": "Golden, crispy chicken tenders made with juicy chicken breast, served alongside a fresh red cabbage slaw tossed in a light, tangy dressing. Finished with herbs and a savory dipping sauce for a satisfying balance of crunch and flavor.",
-      "price": "$24.99"
+      "price": "24.99",
+      "spice": "Very Spicy",
+      "time": "10-20 min",
+      "available": true
     },
     {
       "id": "7",
       "image": "food/crispy-fried-stuffed-zucchini-boats-with-herbs-peppers.webp",
       "title": "Stuffed Zucchini",
       "description": "Fresh zucchini boats stuffed with a savory blend of herbs, bell peppers, and seasoned vegetables, then fried until perfectly golden and crispy. Served with a tender, flavorful filling and a satisfying crunchy finish.",
-      "price": "$22.99"
+      "price": "22.99",
+      "spice": "Not Spicy",
+      "time": "40-50 min",
+      "available": false
     }
   ],
-  "New":[
-     {
+
+  "New": [
+    {
       "id": "4",
       "image": "food/perfectly-grilled-steak-with-fresh-rosemary.webp",
       "title": "Rosemary Grilled Steak",
       "description": "Juicy grilled beef steak seasoned with fresh rosemary, garlic, and cracked black pepper. Cooked to perfection and served with a rich, savory finish that highlights the steak's natural flavor.",
-      "price": "$56.99"
-    },    {
+      "price": "56.99",
+      "spice": "Medium",
+      "time": "10-15 min",
+      "available": true
+    },
+    {
       "id": "5",
       "image": "food/spicy-grilled-chicken-with-red-onion-green-chili.webp",
       "title": "Spicy Grilled Chicken",
       "description": "Tender grilled chicken marinated with bold spices and flame-cooked to perfection. Served with fresh red onion, green chili, and aromatic herbs for a smoky, juicy dish with a satisfying kick.",
-      "price": "$27.99"
+      "price": "27.99",
+      "spice": "Medium",
+      "time": "30-40 min",
+      "available": true
     },
-
     {
       "id": "6",
       "image": "food/crispy-fried-chicken-tenders-with-red-cabbage-slaw.webp",
       "title": "Crispy Fried Chicken",
       "description": "Golden, crispy chicken tenders made with juicy chicken breast, served alongside a fresh red cabbage slaw tossed in a light, tangy dressing. Finished with herbs and a savory dipping sauce for a satisfying balance of crunch and flavor.",
-      "price": "$24.99"
+      "price": "24.99",
+      "spice": "Very Spicy",
+      "time": "10-20 min",
+      "available": true
     },
     {
       "id": "7",
       "image": "food/crispy-fried-stuffed-zucchini-boats-with-herbs-peppers.webp",
       "title": "Stuffed Zucchini",
       "description": "Fresh zucchini boats stuffed with a savory blend of herbs, bell peppers, and seasoned vegetables, then fried until perfectly golden and crispy. Served with a tender, flavorful filling and a satisfying crunchy finish.",
-      "price": "$22.99"
+      "price": "22.99",
+      "spice": "Not Spicy",
+      "time": "40-50 min",
+      "available": true
     }
   ]
 }

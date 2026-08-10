@@ -1,10 +1,10 @@
 export default function Footer() {
   const links = [
-    { label: "FAQ", href: "" },
-    { label: "Terms & Conditions", href: "" },
-    { label: "Shipping Policy", href: "" },
-    { label: "Our Mission", href: "about-us/#OurMission" },
-    { label: "Our Story", href: "about-us/#Ourstory" },
+    { label: "FAQ", href:"about-us/#FAQ" },
+    { label: "Terms & Conditions", href: "about-us/#FAQ" },
+    { label: "Shipping Policy", href: "about-us/#FAQ" },
+    { label: "Our Mission", href: "about-us/#FAQ" },
+    { label: "Our Story", href: "about-us/#FAQ" },
   ];
 
   return (

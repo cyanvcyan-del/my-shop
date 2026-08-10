@@ -21,6 +21,7 @@ export default function Navbar() {
                      rounded-full flex items-center justify-center
                      ml-0 md:ml-2.5 font-black text-base md:text-xl
                      transition-all duration-300 hover:scale-105 active:scale-105"
+                     title="Home"
         >
           Verdea
         </Link>

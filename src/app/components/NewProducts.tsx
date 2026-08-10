@@ -18,11 +18,12 @@ export default function NewProducts() {
         }}>
          {data.New.map((product) => (
           <ProductCart
-            key={product.id}
-            image={product.image}
-            title={product.title}
-            price={product.price}
-          />
+             key={product.id}
+             id={product.id}
+             image={product.image}
+             title={product.title}
+             price={product.price}
+           />
         ))}
     </div>
               <style>{`

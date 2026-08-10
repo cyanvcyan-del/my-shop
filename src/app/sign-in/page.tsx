@@ -126,7 +126,7 @@ const StyledWrapper = styled.div`
 
 export default function Signin() {
   return (
-    <StyledWrapper className="mt-11 mx-auto">
+    <StyledWrapper className="mt-20 mx-auto">
       <form className="form">
         {/* Email */}
         <div className="flex-column">
@@ -146,9 +146,10 @@ export default function Signin() {
           </svg>
 
           <input
-            type="text"
+            type="email"
             className="input"
             placeholder="Enter your Email"
+            required
           />
         </div>
 
@@ -173,6 +174,7 @@ export default function Signin() {
             type="password"
             className="input"
             placeholder="Enter your Password"
+            required
           />
 
           {/* Eye Icon */}

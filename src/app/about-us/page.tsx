@@ -1,3 +1,4 @@
+import { AccordionDemo } from "../features/Accordion";
 
 export default function about() {
   return (
@@ -21,7 +22,7 @@ export default function about() {
 
         {/* Main Content */}
         <div className="space-y-8">
-          <div id="Ourstory" className="rounded-3xl bg-mainT p-8 shadow-sm shadow-[3px_4px_6.7px_rgba(0,0,0,0.02)] sm:p-10">
+          <div id="Ourstory" className="rounded-3xl bg-mainT p-8  shadow-[3px_4px_6.7px_rgba(0,0,0,0.02)] sm:p-10">
             <h2 className="mb-4 text-2xl font-bold text-gray-900">
               Our Story
             </h2>
@@ -125,6 +126,8 @@ export default function about() {
             </p>
           </div>
         </div>
+        <h1 id="FAQ" className="text-mainP-500 select-none">FAQ</h1>
+        <AccordionDemo/>
       </section>
     </div>
   );

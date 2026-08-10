@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { menuItems, fetchMenu, MenuItem } from "@/src/database/dbGrouping";
+import { fetchMenu, MenuItem } from "@/src/database/dbGrouping";
 import GroupingCard from "./layout/GroupingCard";
 
 export default function Grouping() {
@@ -40,7 +40,11 @@ export default function Grouping() {
       >
         {items.map((item) => (
           <div key={item.id} className="flex-shrink-0">
-            <GroupingCard title={item.title} icon={item.icon} />
+           <GroupingCard
+  title={item.title}
+  icon={item.icon}
+  link={item.link}
+/>
           </div>
         ))}
       </section>
