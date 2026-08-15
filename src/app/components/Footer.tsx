@@ -3,8 +3,8 @@ export default function Footer() {
     { label: "FAQ", href:"about-us/#FAQ" },
     { label: "Terms & Conditions", href: "about-us/#FAQ" },
     { label: "Shipping Policy", href: "about-us/#FAQ" },
-    { label: "Our Mission", href: "about-us/#FAQ" },
-    { label: "Our Story", href: "about-us/#FAQ" },
+    { label: "Our Mission", href: "about-us/#OurMission" },
+    { label: "Our Story", href: "about-us/#Ourstory" },
   ];
 
   return (

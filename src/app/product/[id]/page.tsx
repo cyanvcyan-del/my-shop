@@ -1,7 +1,6 @@
-
 "use client";
 
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Link from "next/link";
 import {
   Heart,
@@ -15,6 +14,7 @@ import {
 
 import { toast } from "@/components/ui/toast";
 import data from "@/src/database/db.json";
+import { isFavorite, toggleFavorite } from "@/lib/favorites";
 
 type ProductPageProps = {
   params: Promise<{
@@ -42,6 +42,41 @@ export default function ProductDetails({
   const [quantity, setQuantity] = useState(1);
   const [favorite, setFavorite] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
+
+  // =========================
+  // TRACK RECENTLY VIEWED
+  // =========================
+
+  useEffect(() => {
+    if (!product) return;
+
+    try {
+      const stored: string[] = JSON.parse(
+        localStorage.getItem("verdea-recently-viewed") || "[]"
+      );
+
+      const updated = [
+        String(product.id),
+        ...stored.filter((storedId) => storedId !== String(product.id)),
+      ].slice(0, 12);
+
+      localStorage.setItem(
+        "verdea-recently-viewed",
+        JSON.stringify(updated)
+      );
+    } catch {
+      // ignore storage errors
+    }
+  }, [product]);
+
+  // =========================
+  // SYNC FAVORITE STATE
+  // =========================
+
+  useEffect(() => {
+    if (!product) return;
+    setFavorite(isFavorite(product.id));
+  }, [product]);
 
   if (!product) {
     return (
@@ -118,6 +153,29 @@ export default function ProductDetails({
         });
       }
     }
+  };
+
+  // =========================
+  // TOGGLE FAVORITE
+  // =========================
+
+  const handleToggleFavorite = () => {
+    const nowFavorite = toggleFavorite({
+      id: product.id,
+      image: product.image,
+      title: product.title,
+      price: product.price,
+    });
+
+    setFavorite(nowFavorite);
+
+    toast.add({
+      title: nowFavorite ? "Added to favorites" : "Removed from favorites",
+      description: nowFavorite
+        ? `${product.title} has been added to your favorites.`
+        : `${product.title} has been removed from your favorites.`,
+      type: "success",
+    });
   };
 
   // =========================
@@ -471,9 +529,7 @@ export default function ProductDetails({
 
               <button
                 type="button"
-                onClick={() =>
-                  setFavorite((current) => !current)
-                }
+                onClick={handleToggleFavorite}
                 aria-label="Favorite"
                 className={`flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[13px] border transition sm:h-[56px] sm:w-[56px] sm:rounded-[14px] ${
                   favorite
@@ -604,4 +660,3 @@ export default function ProductDetails({
     </main>
   );
 }
-

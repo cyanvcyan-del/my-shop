@@ -117,6 +117,14 @@ export default function Navbar() {
               Grouping
             </Link>
           </li>
+            <li>
+              <Link
+                href="/products"
+                className="inline-block transition-all duration-300 hover:scale-110 active:scale-110"
+              >
+               Products
+              </Link>
+            </li>
 
           <li>
             <Link
@@ -207,11 +215,15 @@ export default function Navbar() {
                   </DropdownMenuLabel>
 
                   <DropdownMenuItem>
-                    Profile
+                    <Link href="/profile" className="w-full">
+                      Profile
+                    </Link>
                   </DropdownMenuItem>
 
                   <DropdownMenuItem>
-                    Favorite
+                    <Link href="/favorites" className="w-full">
+                      Favorite
+                    </Link>
                   </DropdownMenuItem>
 
                   <DropdownMenuItem>
@@ -292,6 +304,14 @@ export default function Navbar() {
                 Grouping
               </Link>
             </li>
+              <li>
+              <Link
+                href="/products"
+                className="inline-block transition-all duration-300 hover:scale-110 active:scale-110"
+              >
+               Products
+              </Link>
+            </li>
 
             <li>
               <Link
@@ -350,11 +370,15 @@ export default function Navbar() {
                   </DropdownMenuLabel>
 
                   <DropdownMenuItem>
-                    Profile
+                    <Link href="/profile" className="w-full">
+                      Profile
+                    </Link>
                   </DropdownMenuItem>
 
                   <DropdownMenuItem>
-                    Favorite
+                    <Link href="/favorites" className="w-full">
+                      Favorite
+                    </Link>
                   </DropdownMenuItem>
 
                   <DropdownMenuItem>

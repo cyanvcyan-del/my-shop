@@ -98,9 +98,8 @@ export default function ProductCard({
         </div>
 
       
-        <p className="text-base font-black  ml-1 mt-1">
-          ★★★★★
-          
+        <p className="text-sm ml-1 mt-1">
+          ⭐⭐⭐⭐⭐
         </p>
 
        

@@ -52,6 +52,7 @@ export default function Checkout() {
   const [paymentMethod, setPaymentMethod] = useState("cash");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
 
   useEffect(() => {
     const localUser = localStorage.getItem("verdea-current-user");
@@ -65,6 +66,13 @@ export default function Checkout() {
     if (!currentUser) {
       router.replace("/sign-in");
       return;
+    }
+
+    try {
+      const parsedUser = JSON.parse(currentUser);
+      setUserEmail(parsedUser.email || "");
+    } catch {
+      setUserEmail("");
     }
 
     const storedCart: CartItem[] = JSON.parse(
@@ -149,6 +157,7 @@ export default function Checkout() {
 
       const order = {
         id: orderId,
+        ownerEmail: userEmail,
         customer,
         paymentMethod,
         items: cartItems,
@@ -159,9 +168,34 @@ export default function Checkout() {
         createdAt: new Date().toISOString(),
       };
 
+      // =========================
+      // SAVE AS "LAST ORDER"
+      // (read by the order-success page)
+      // =========================
+
       localStorage.setItem(
         "verdea-last-order",
         JSON.stringify(order)
+      );
+
+      // =========================
+      // APPEND TO ORDER HISTORY
+      // (read by the profile page's Recent Orders section)
+      // =========================
+
+      let existingOrders: (typeof order)[] = [];
+
+      try {
+        existingOrders = JSON.parse(
+          localStorage.getItem("verdea-orders") || "[]"
+        );
+      } catch {
+        existingOrders = [];
+      }
+
+      localStorage.setItem(
+        "verdea-orders",
+        JSON.stringify([...existingOrders, order])
       );
 
       localStorage.removeItem("verdea-cart");
