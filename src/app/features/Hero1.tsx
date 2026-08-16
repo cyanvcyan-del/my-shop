@@ -203,8 +203,8 @@ export default function Hero() {
 
       {/* ===================== TABLET / DESKTOP ===================== */}
 
-      <div className="mx-auto mt-7 hidden w-[95%] [container-type:inline-size] md:block">
-        <div className="relative h-[66.575cqw] w-full">
+      <div className="mx-auto mt-1 hidden w-[95%] [container-type:inline-size] md:block">
+        <div className="relative h-[64.575cqw] w-full">
           {/* BACKGROUND CARD */}
 
           <div className="absolute left-0 top-[3.302%] h-[72.489%] w-full rounded-[2.747cqw] bg-[#F7F9FC] shadow-[0_10px_30px_rgba(0,0,0,0.04)]" />
